@@ -1,0 +1,15 @@
+
+MONGODB_URI=mongodb+srv://applicationcomputer257:9vxAQjGxswmGu8V1@cluster0.dxt31.mongodb.net/kampus-social-prod
+NEXT_PUBLIC_URL=https://kampus.social/
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_live_Y2xlcmsua2FtcHVzLnNvY2lhbCQ
+CLERK_SECRET_KEY=sk_live_yH5eVv4M9lAvozxuavjdjpxm5kqCTod8h0dJh5ahCG
+WEBHOOK_SECRET=whsec_sDzDjHfZFiXuUKQRZhvWzQiDiL5xKRjZ
+NEXT_PUBLIC_APPWRITE_PROJECT_ID="672b6bf500226ac971b7"
+NEXT_PUBLIC_APPWRITE_BUCKET_ID="672b6cd9002495266de5"
+NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL=/
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+
+# Stream
+NEXT_PUBLIC_STREAM_API_KEY="8c5d7bmb869b"
+CHAT_API_SECRET="qgg3wggevjm4sa42cxsuabz4f3dppjqpe49uuvur59a24hwsvuqc594wdm7rdyvz"
