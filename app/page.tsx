@@ -37,17 +37,25 @@ async function DiscussionsContent() {
 
 export default function Page() {
   return (
-    <main className="flex w-full text-black h-screen overflow-y-hidden border-r ">
-      <div className="flex flex-col w-full h-full overflow-hidden relative">
-        <TopMenu />
-        <div className="mt-1 flex">
-          <ErrorBoundary fallback={<div>Failed to load discussions</div>}>
-            <Suspense fallback={<DiscussionsLoading />}>
-              <DiscussionsContent />
-            </Suspense>
-          </ErrorBoundary>
-          <FloatingPostButton />
+    <main className="flex w-full  h-screen overflow-y-hidden  ">
+      <div className="flex flex-col  w-full h-full overflow-hidden relative">
+        <div className='w-full flex justify-center items-center bg-background shadow-sm'>
+          <div className='w-[600px]'>
+            <TopMenu />
+          </div>
 
+        </div>
+
+        <div className='w-full flex justify-center items-center'>
+          <div className="mt-1 flex w-[600px]  ">
+            <ErrorBoundary fallback={<div>Failed to load discussions</div>}>
+              <Suspense fallback={<DiscussionsLoading />}>
+                <DiscussionsContent />
+              </Suspense>
+            </ErrorBoundary>
+            <FloatingPostButton />
+
+          </div>
         </div>
       </div>
     </main>

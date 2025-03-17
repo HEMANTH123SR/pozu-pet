@@ -18,7 +18,7 @@ const config: Config = {
         text_primary: "#000000",
         text_secondary: "#64696C",
         darkBorder: "#303130",
-        primary: "#5E04D5",
+        primary: "#595ADE",
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",

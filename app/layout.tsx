@@ -61,15 +61,15 @@ export default function RootLayout({
         baseTheme: dark,
       }}
     >
-      <html lang="en" className="dark">
+      <html lang="en" >
         <body
-          className={`antialiased ${HackerNormal.className} bg-background  h-screen max-h-screen overflow-y-hidden  `}
+          className={`antialiased ${HackerNormal.className} bg-[#F3F5F7]  h-screen max-h-screen overflow-y-hidden  `}
         >
           <ClerkLoading>
             <SandboxLoading />
           </ClerkLoading>
           <ClerkLoaded>
-            <div className="flex flex-col lg:flex-row lg:max-w-[1240px] lg:w-[1240px] w-full min-h-screen mx-auto ">
+            <div className="flex flex-col lg:flex-row  w-full min-h-screen mx-auto ">
               <SideMenu />
               <MobileHeader />
               {children}
