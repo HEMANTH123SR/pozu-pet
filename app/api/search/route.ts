@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { connectToDatabase } from "@/db/index";
 import { Discussion } from "@/db/models/discussion.model";
 import { User } from "@/db/models/user.model";

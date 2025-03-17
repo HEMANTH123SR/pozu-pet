@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { connectToDatabase } from "@/db/index";
 import { User } from "@/db/models/user.model";
 import { NextResponse } from "next/server";

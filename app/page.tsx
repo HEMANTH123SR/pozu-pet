@@ -1,5 +1,5 @@
 
-
+export const dynamic = 'force-dynamic';
 
 import { Suspense } from 'react';
 import { TopMenu } from "@/components/component/top-header";

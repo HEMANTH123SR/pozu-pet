@@ -43,6 +43,8 @@
 //   }
 // }
 
+export const dynamic = "force-dynamic";
+
 import { connectToDatabase } from "@/db/index";
 import { EventAgg } from "@/db/models/event.aggregator.model";
 import { NextResponse, NextRequest } from "next/server";
