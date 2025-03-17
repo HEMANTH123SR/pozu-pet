@@ -130,7 +130,7 @@ export const DiscussionCreateFooter: React.FC<DiscussionCreateFooterPropsInterfa
         <div className="flex items-center gap-3 space-x-1">
           <label
             htmlFor="image-upload"
-            className="flex justify-center text-darkTextSecondery items-center cursor-pointer hover:scale-125 group rounded-md transition-colors"
+            className="flex justify-center text-text_secondary items-center cursor-pointer hover:scale-125 group rounded-md transition-colors"
           >
             <input
               type="file"
@@ -149,7 +149,7 @@ export const DiscussionCreateFooter: React.FC<DiscussionCreateFooterPropsInterfa
 
           <div className="relative mt-2">
             <button
-              className="emoji-button hover:scale-125 text-darkTextSecondery group rounded-md transition-colors"
+              className="emoji-button hover:scale-125 text-text_secondary group rounded-md transition-colors"
               onClick={() => setShowEmojiPicker(!showEmojiPicker)}
             >
               <DynamicSvgIcon
@@ -171,7 +171,7 @@ export const DiscussionCreateFooter: React.FC<DiscussionCreateFooterPropsInterfa
           </div>
 
           <button
-            className="hover:scale-125 text-darkTextSecondery group rounded-md transition-colors"
+            className="hover:scale-125 text-text_secondary group rounded-md transition-colors"
             onClick={handlePollSwitch}
           >
             <DynamicSvgIcon
@@ -182,7 +182,7 @@ export const DiscussionCreateFooter: React.FC<DiscussionCreateFooterPropsInterfa
           </button>
         </div>
 
-        <span className="text-sm text-gray-400 dark:text-darkTextSecondery">
+        <span className="text-sm text-gray-400 dark:text-text_secondary">
           Type @ to mention people and clubs and institute
         </span>
       </div>

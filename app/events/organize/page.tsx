@@ -256,7 +256,7 @@ export default function CreateEvent() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col border-r border-darkBorder w-full h-screen overflow-y-scroll scroll-hidden text-darkTextPrimary p-10 space-y-8">
+    <form onSubmit={handleSubmit} className="flex flex-col border-r border-darkBorder w-full h-screen overflow-y-scroll scroll-hidden text-text_primary p-10 space-y-8">
       {/* First Row: Cover Image and Event Name */}
       <div className="flex space-x-6 items-center">
         <div className="w-96 ">
@@ -323,7 +323,7 @@ export default function CreateEvent() {
 
       {/* Fourth Row: Rich Text Editor */}
       <div className="w-full rounded-xl border p-4">
-        <Label className="text-base text-darkTextPrimary mb-4 block">Description</Label>
+        <Label className="text-base text-text_primary mb-4 block">Description</Label>
         <RichTextEditor
           value={formData.description}
           onChange={handleDescriptionChange}

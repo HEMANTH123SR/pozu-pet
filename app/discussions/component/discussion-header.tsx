@@ -92,13 +92,13 @@ export function DiscussionHeader({
           }} className="flex items-center space-x-2">
             <span
               itemProp="author"
-              className="font-medium dark:text-darkTextPrimary text-sm capitalize hover:underline truncate max-w-[150px]"
+              className="font-medium dark:text-text_primary text-sm capitalize hover:underline truncate max-w-[150px]"
             >
               {author.fullName}
             </span>
           </div>
 
-          <div className="flex items-center space-x-1.5 text-darkTextSecondery text-xs sm:text-sm">
+          <div className="flex items-center space-x-1.5 text-text_secondary text-xs sm:text-sm">
             <span className="truncate max-w-[100px]" aria-label="username">
               @{author.username}
             </span>
@@ -120,7 +120,7 @@ export function DiscussionHeader({
               <DropdownMenuTrigger
                 className="group rounded-full p-1 hover:bg-blue-200 hover:bg-opacity-10 cursor-pointer focus:outline-none"
               >
-                <Ellipsis className="w-4 h-4 dark:text-darkTextSecondery group-hover:text-primary" />
+                <Ellipsis className="w-4 h-4 dark:text-text_secondary group-hover:text-primary" />
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-40">
                 {isAuthor && (

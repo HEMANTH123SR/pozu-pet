@@ -148,7 +148,7 @@ const RichTextEditor = ({ onChange, defaultValue, value }: RichTextEditorProps) 
     }, [value]);
 
     return (
-        <Card className="w-full  mx-auto bg-darkBackground border-t border-b-0 ">
+        <Card className="w-full  mx-auto bg-background border-t border-b-0 ">
             <div className="p-4">
                 <div id="editor-js" className="prose prose-sm sm:prose lg:prose-lg xl:prose-2xl" />
             </div>

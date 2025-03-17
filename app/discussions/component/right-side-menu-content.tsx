@@ -51,7 +51,7 @@ export const DiscussionRightSideBarContent = ({ onHome }: { onHome: boolean }) =
   }
 
   return (
-    <div className="w-full border-r dark:text-darkTextPrimary dark:border-darkBorder h-screen overflow-hidden flex flex-col">
+    <div className="w-full border-r dark:text-text_primary dark:border-darkBorder h-screen overflow-hidden flex flex-col">
       <div className="flex-1 h-full overflow-y-scroll scroll-hidden pb-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -67,7 +67,7 @@ export const DiscussionRightSideBarContent = ({ onHome }: { onHome: boolean }) =
               Trending Discussions
             </h3>
 
-            <div className="bg-darksec border-darkBorder p-1 cursor-pointer rounded-lg border group">
+            <div className="bg-foreground border-darkBorder p-1 cursor-pointer rounded-lg border group">
 
               <DynamicSvgIcon
                 isActive={false}
@@ -88,7 +88,7 @@ export const DiscussionRightSideBarContent = ({ onHome }: { onHome: boolean }) =
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.1 }}
-                  className="relative p-4   hover:bg-darksec/40 transition-all duration-300 group overflow-hidden"
+                  className="relative p-4   hover:bg-foreground/40 transition-all duration-300 group overflow-hidden"
                 >
                   <div className="flex gap-4 relative z-10">
                     <div className="relative w-12 h-12">
@@ -109,7 +109,7 @@ export const DiscussionRightSideBarContent = ({ onHome }: { onHome: boolean }) =
                         <span className="font-medium text-sm capitalize">
                           {discussion.author.fullName}
                         </span>
-                        <span className="text-darkTextSecondery text-xs">
+                        <span className="text-text_secondary text-xs">
                           {getTimeAgo(discussion.createdAt as Date)}
                         </span>
                       </div>
@@ -137,12 +137,12 @@ export const DiscussionRightSideBarContent = ({ onHome }: { onHome: boolean }) =
                                     alt="Commenter avatar"
                                     fill
                                     sizes="24px"
-                                    className="rounded-full border-2 border-darkBackground object-cover"
+                                    className="rounded-full border-2 border-background object-cover"
                                   />
                                 </div>
                               ))}
                           </div>
-                          <span className="text-darkTextSecondery text-xs">
+                          <span className="text-text_secondary text-xs">
                             Joined the discussion
                           </span>
                         </div>

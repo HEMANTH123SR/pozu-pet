@@ -29,7 +29,7 @@ export const HeaderAuthTop = () => {
     }, []);
 
     const UserCountDisplay = ({ className }: { className?: string }) => (
-        <div className={`text-darkTextPrimary font-medium bg-darksec p-4 border-2 border-darkBorder rounded-xl py-2 ${className}`}
+        <div className={`text-text_primary font-medium bg-foreground p-4 border-2 border-darkBorder rounded-xl py-2 ${className}`}
             style={hackerMedium.style}
         >
             {isLoading ? (
@@ -41,7 +41,7 @@ export const HeaderAuthTop = () => {
     );
 
     return (
-        <header className="w-full z-40 bg-darkBackground border-b border-darkBorder">
+        <header className="w-full z-40 bg-background border-b border-darkBorder">
             <div className="flex h-16 sm:h-20 items-center justify-between px-4 sm:px-6 md:px-12">
                 {/* Logo */}
                 <div className="flex-shrink-0 ">
@@ -58,7 +58,7 @@ export const HeaderAuthTop = () => {
                             className="rounded-2xl sm:w-12 sm:h-12"
                         />
                         <span
-                            className={`${strawberry.className} text-black dark:text-darkTextPrimary text-3xl sm:text-3xl`}
+                            className={`${strawberry.className} text-black dark:text-text_primary text-3xl sm:text-3xl`}
                         >
                             kampus
                         </span>
@@ -67,7 +67,7 @@ export const HeaderAuthTop = () => {
 
 
                 {/* Desktop Navigation */}
-                <nav className="hidden md:flex space-x-6 text-darkTextPrimary font-medium"
+                <nav className="hidden md:flex space-x-6 text-text_primary font-medium"
                     style={hackerMedium.style}
                 >
                     <Link href="/story" className="hover:text-white transition">
@@ -89,7 +89,7 @@ export const HeaderAuthTop = () => {
                 {/* Mobile Menu Button */}
                 <button
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    className="md:hidden p-2 text-darkTextPrimary hover:text-white transition"
+                    className="md:hidden p-2 text-text_primary hover:text-white transition"
                     aria-label="Toggle menu"
                 >
                     {isMenuOpen ? (
@@ -102,27 +102,27 @@ export const HeaderAuthTop = () => {
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="md:hidden bg-darkBackground border-t border-darkBorder">
+                <div className="md:hidden bg-background border-t border-darkBorder">
                     <nav className="flex flex-col py-4 px-4 space-y-4"
                         style={hackerMedium.style}
                     >
                         <Link
                             href="/story"
-                            className="text-darkTextPrimary hover:text-white transition px-4 py-2 rounded-lg hover:bg-darksec"
+                            className="text-text_primary hover:text-white transition px-4 py-2 rounded-lg hover:bg-foreground"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Our Story
                         </Link>
                         <Link
                             href="/support"
-                            className="text-darkTextPrimary hover:text-white transition px-4 py-2 rounded-lg hover:bg-darksec"
+                            className="text-text_primary hover:text-white transition px-4 py-2 rounded-lg hover:bg-foreground"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Support
                         </Link>
                         <Link
                             href="/stories"
-                            className="text-darkTextPrimary hover:text-white transition px-4 py-2 rounded-lg hover:bg-darksec"
+                            className="text-text_primary hover:text-white transition px-4 py-2 rounded-lg hover:bg-foreground"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Student Stories

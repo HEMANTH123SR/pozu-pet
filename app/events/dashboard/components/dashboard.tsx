@@ -22,7 +22,7 @@ export const EventDashboard = ({ event }) => {
     if (!event) return null;
 
     return (
-        <div className="min-h-screen  text-darkTextPrimary">
+        <div className="min-h-screen  text-text_primary">
             {/* Header Section */}
             <div className="border-b border-zinc-800 p-4  w-full">
                 <div className="flex px-6 items-center justify-between">
@@ -67,7 +67,7 @@ export const EventDashboard = ({ event }) => {
                             <EventDetailsCard event={event} />
 
                             {/* Quick Stats Card */}
-                            <Card className="bg-darksec border-zinc-800">
+                            <Card className="bg-foreground border-zinc-800">
                                 <CardContent className="p-6">
                                     <h3 className="text-lg font-semibold mb-4">Quick Stats</h3>
                                     <div className="space-y-4">
@@ -84,7 +84,7 @@ export const EventDashboard = ({ event }) => {
                             </Card>
 
                             {/* Feature Cards */}
-                            <Card className="bg-darksec border-zinc-800">
+                            <Card className="bg-foreground border-zinc-800">
                                 <CardContent className="p-6">
                                     <h3 className="text-lg font-semibold mb-4">Schedule</h3>
                                     <Button variant="outline" className="w-full">
@@ -94,7 +94,7 @@ export const EventDashboard = ({ event }) => {
                                 </CardContent>
                             </Card>
 
-                            <Card className="bg-darksec border-zinc-800">
+                            <Card className="bg-foreground border-zinc-800">
                                 <CardContent className="p-6">
                                     <h3 className="text-lg font-semibold mb-4">Prizes</h3>
                                     <Button variant="outline" className="w-full">
@@ -104,7 +104,7 @@ export const EventDashboard = ({ event }) => {
                                 </CardContent>
                             </Card>
 
-                            <Card className="bg-darksec border-zinc-800">
+                            <Card className="bg-foreground border-zinc-800">
                                 <CardContent className="p-6">
                                     <h3 className="text-lg font-semibold mb-4">Support</h3>
                                     <Button variant="outline" className="w-full">

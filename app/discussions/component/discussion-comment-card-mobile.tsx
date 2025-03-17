@@ -206,8 +206,8 @@ export const MobileCommentCard = ({
                 <div className="flex-1">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-1">
-                            <span className="font-semibold text-sm text-darkTextPrimary">{comment.user.fullName}</span>
-                            <span className="text-xs text-darkTextSecondery">
+                            <span className="font-semibold text-sm text-text_primary">{comment.user.fullName}</span>
+                            <span className="text-xs text-text_secondary">
                                 {formatDistanceToNow(new Date(comment.createdAt), { addSuffix: true })}
                             </span>
                         </div>
@@ -215,18 +215,18 @@ export const MobileCommentCard = ({
                         {currentUser?._id === comment.user._id && (
                             <DropdownMenu>
                                 <DropdownMenuTrigger>
-                                    <Ellipsis className="w-4 h-4 text-darkTextSecondery" />
+                                    <Ellipsis className="w-4 h-4 text-text_secondary" />
                                 </DropdownMenuTrigger>
-                                <DropdownMenuContent className="bg-darksec border-darkBorder">
+                                <DropdownMenuContent className="bg-foreground border-darkBorder">
                                     <DropdownMenuItem
                                         onClick={() => setIsEditing(true)}
-                                        className="text-darkTextPrimary hover:bg-darkBackground"
+                                        className="text-text_primary hover:bg-background"
                                     >
                                         Edit
                                     </DropdownMenuItem>
                                     <DropdownMenuItem
                                         onClick={handleDelete}
-                                        className="text-red-600 hover:bg-darkBackground"
+                                        className="text-red-600 hover:bg-background"
                                     >
                                         Delete
                                     </DropdownMenuItem>
@@ -240,7 +240,7 @@ export const MobileCommentCard = ({
                             <textarea
                                 value={editContent}
                                 onChange={(e) => setEditContent(e.target.value)}
-                                className="w-full p-2 text-sm bg-darksec border border-darkBorder rounded-lg resize-none focus:ring-1 focus:ring-primary min-h-[60px]"
+                                className="w-full p-2 text-sm bg-foreground border border-darkBorder rounded-lg resize-none focus:ring-1 focus:ring-primary min-h-[60px]"
                             />
                             <div className="flex justify-end gap-2 mt-2">
                                 <button
@@ -248,7 +248,7 @@ export const MobileCommentCard = ({
                                         setIsEditing(false)
                                         setEditContent(comment.content)
                                     }}
-                                    className="px-3 py-1 text-xs text-darkTextSecondery hover:text-darkTextPrimary"
+                                    className="px-3 py-1 text-xs text-text_secondary hover:text-text_primary"
                                 >
                                     Cancel
                                 </button>
@@ -262,13 +262,13 @@ export const MobileCommentCard = ({
                             </div>
                         </div>
                     ) : (
-                        <p className="mt-1 text-sm text-darkTextPrimary">{comment.content}</p>
+                        <p className="mt-1 text-sm text-text_primary">{comment.content}</p>
                     )}
 
                     <div className="flex items-center gap-4 mt-2">
                         <button
                             onClick={handleReaction}
-                            className="flex items-center gap-1 text-xs text-darkTextSecondery"
+                            className="flex items-center gap-1 text-xs text-text_secondary"
                         >
                             <DynamicSvgIcon
                                 src="/heart.svg"
@@ -281,20 +281,20 @@ export const MobileCommentCard = ({
                         </button>
 
                         <Sheet>
-                            <SheetTrigger className="flex items-center gap-1 text-xs text-darkTextSecondery">
+                            <SheetTrigger className="flex items-center gap-1 text-xs text-text_secondary">
                                 <DynamicSvgIcon src="/reply.svg" isActive={false} size={16} />
                                 Reply
                             </SheetTrigger>
-                            <SheetContent side="bottom" className="h-[40vh] bg-darksec border-t border-darkBorder">
+                            <SheetContent side="bottom" className="h-[40vh] bg-foreground border-t border-darkBorder">
                                 <SheetHeader>
-                                    <SheetTitle className="text-darkTextPrimary">Reply to {comment.user.fullName}</SheetTitle>
+                                    <SheetTitle className="text-text_primary">Reply to {comment.user.fullName}</SheetTitle>
                                 </SheetHeader>
                                 <form onSubmit={handleReplySubmit} className="mt-4">
                                     <textarea
                                         value={replyContent}
                                         onChange={(e) => setReplyContent(e.target.value)}
                                         placeholder="Write your reply..."
-                                        className="w-full p-3 bg-darkBackground border border-darkBorder rounded-lg resize-none focus:ring-1 focus:ring-primary min-h-[100px] text-darkTextPrimary placeholder:text-darkTextSecondery"
+                                        className="w-full p-3 bg-background border border-darkBorder rounded-lg resize-none focus:ring-1 focus:ring-primary min-h-[100px] text-text_primary placeholder:text-text_secondary"
                                         disabled={isLoading}
                                     />
                                     <div className="flex justify-end mt-4">
@@ -338,16 +338,16 @@ export const MobileCommentCard = ({
                                             </Avatar>
                                             <div className="flex-1">
                                                 <div className="flex items-center gap-1">
-                                                    <span className="font-semibold text-xs text-darkTextPrimary">
+                                                    <span className="font-semibold text-xs text-text_primary">
                                                         {reply.user.fullName}
                                                     </span>
-                                                    <span className="text-xs text-darkTextSecondery">
+                                                    <span className="text-xs text-text_secondary">
                                                         {formatDistanceToNow(new Date(reply.createdAt), {
                                                             addSuffix: true,
                                                         })}
                                                     </span>
                                                 </div>
-                                                <p className="mt-1 text-xs text-darkTextPrimary">{reply.content}</p>
+                                                <p className="mt-1 text-xs text-text_primary">{reply.content}</p>
                                             </div>
                                         </div>
                                     ))}

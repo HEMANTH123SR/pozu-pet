@@ -105,7 +105,7 @@ export const EditProfileForm = ({ user, userId }) => {
 
   return (
     <FormProvider {...methods} >
-      <div className="w-full flex flex-col h-screen overflow-y-scroll scroll-hidden border-r bg-darkBackground pb-14">
+      <div className="w-full flex flex-col h-screen overflow-y-scroll scroll-hidden border-r bg-background pb-14">
         <div
           className="w-full flex justify-between items-center px-6 border-b min-h-14"
           style={hackerMedium.style}
@@ -139,7 +139,7 @@ export const EditProfileForm = ({ user, userId }) => {
             </Button>
           </div>
         </div>
-        <Card className="w-full max-w-4xl mx-auto bg-darkBackground">
+        <Card className="w-full max-w-4xl mx-auto bg-background">
           <CardContent>
             <form
               // onSubmit={methods.handleSubmit(onSubmit)}
@@ -224,10 +224,10 @@ export const EditProfileForm = ({ user, userId }) => {
 
                         >
                           <div className="relative mt-1">
-                            <div className="relative h-9 bg-darksec w-full cursor-default overflow-hidden rounded-md  text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-darkBackground focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-purple-700 sm:text-sm">
-                              <div className="bg-darkBackground border border-input rounded-md">
+                            <div className="relative h-9 bg-foreground w-full cursor-default overflow-hidden rounded-md  text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-background focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-purple-700 sm:text-sm">
+                              <div className="bg-background border border-input rounded-md">
                                 <Combobox.Input
-                                  className="w-full text-darkTextPrimary bg-darkBackground border-none py-[0.450rem] pl-3 pr-10 text-sm leading-5  focus:ring-0 rounded-md "
+                                  className="w-full text-text_primary bg-background border-none py-[0.450rem] pl-3 pr-10 text-sm leading-5  focus:ring-0 rounded-md "
                                   onChange={(event) => field.onChange(event.target.value)}
                                   displayValue={(university: string) => university}
                                 />
@@ -243,7 +243,7 @@ export const EditProfileForm = ({ user, userId }) => {
 
 
 
-                            <Combobox.Options className=" text-darkTextPrimary  absolute mt-1 max-h-60 w-full overflow-auto  bg-darkBackground py-1 text-sm shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                            <Combobox.Options className=" text-text_primary  absolute mt-1 max-h-60 w-full overflow-auto  bg-background py-1 text-sm shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                               {instituteDetails
                                 .filter((institute) =>
                                   field.value
@@ -256,7 +256,7 @@ export const EditProfileForm = ({ user, userId }) => {
                                   <Combobox.Option
                                     key={institute._id}
                                     className={({ active }) =>
-                                      `relative cursor-default select-none py-2 pl-10 pr-4 ${active ? 'bg-primary text-darkTextPrimary' : 'text-darkTextPrimary'
+                                      `relative cursor-default select-none py-2 pl-10 pr-4 ${active ? 'bg-primary text-text_primary' : 'text-text_primary'
                                       }`
                                     }
                                     value={institute.name}
@@ -271,7 +271,7 @@ export const EditProfileForm = ({ user, userId }) => {
                                         </span>
                                         {selected ? (
                                           <span
-                                            className={`absolute inset-y-0 left-0 flex items-center pl-3 ${active ? 'text-darkTextPrimary' : 'text-primary'
+                                            className={`absolute inset-y-0 left-0 flex items-center pl-3 ${active ? 'text-text_primary' : 'text-primary'
                                               }`}
                                           >
                                             <Check className="h-5 w-5" aria-hidden="true" />
@@ -296,8 +296,8 @@ export const EditProfileForm = ({ user, userId }) => {
                   {skills.map((skill, index) => (
                     <div
                       key={index}
-                      className="flex px-2 py-1 h-6  text-xs font-medium leading-4 border  rounded-lg text-darkTextPrimary items-center justify-center gap-x-1  box-border 
-                      bg-darksec 
+                      className="flex px-2 py-1 h-6  text-xs font-medium leading-4 border  rounded-lg text-text_primary items-center justify-center gap-x-1  box-border 
+                      bg-foreground 
                       hover:shadow-tag-hover transition-all ease-in-out select-none group/tag group"
                     >
                       <span>{skill}</span>
@@ -340,7 +340,7 @@ export const EditProfileForm = ({ user, userId }) => {
                   {interests.map((interest, index) => (
                     <div
                       key={index}
-                      className="flex bg-darksec px-2 py-1 h-6  text-xs font-medium leading-4 border  rounded-lg text-darkTextPrimary  items-center justify-center gap-x-1  box-border hover:shadow-tag-hover transition-all ease-in-out select-none group/tag group"
+                      className="flex bg-foreground px-2 py-1 h-6  text-xs font-medium leading-4 border  rounded-lg text-text_primary  items-center justify-center gap-x-1  box-border hover:shadow-tag-hover transition-all ease-in-out select-none group/tag group"
                     >
                       <span>{interest}</span>
                       <Button

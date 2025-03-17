@@ -21,11 +21,11 @@ export const EventSettings: React.FC<EventSettingsProps> = ({
     onCapacityChange,
 }) => {
     return (
-        <div className="w-full h-48 min-h-48 max-h-48 p-4 rounded-xl border-darksec border">
+        <div className="w-full h-48 min-h-48 max-h-48 p-4 rounded-xl border-foreground border">
             <div className="flex flex-col space-y-6">
                 <div className="flex items-center justify-between">
                     <div className="space-y-1">
-                        <Label className="text-base text-darkTextPrimary">Require Approval</Label>
+                        <Label className="text-base text-text_primary">Require Approval</Label>
                         <p className="text-sm text-zinc-500">Toggle if you want to manually approve participants</p>
                     </div>
                     <Switch

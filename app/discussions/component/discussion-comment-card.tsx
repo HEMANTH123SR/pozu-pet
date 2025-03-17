@@ -201,8 +201,8 @@ export const CommentCard = ({
                 <div className="flex-1">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                            <span className="font-semibold text-darkTextPrimary">{comment.user.fullName}</span>
-                            <span className="text-sm text-darkTextSecondery">
+                            <span className="font-semibold text-text_primary">{comment.user.fullName}</span>
+                            <span className="text-sm text-text_secondary">
                                 {formatDistanceToNow(new Date(comment.createdAt), { addSuffix: true })}
                             </span>
                         </div>
@@ -211,18 +211,18 @@ export const CommentCard = ({
                             <DropdownMenu>
                                 <DropdownMenuTrigger>
                                     <Ellipsis
-                                        className="cursor-pointer text-darkTextPrimary hover:text-primary"
+                                        className="cursor-pointer text-text_primary hover:text-primary"
                                         size={20}
                                     />
                                 </DropdownMenuTrigger>
-                                <DropdownMenuContent className="bg-darksec border-darkBorder">
+                                <DropdownMenuContent className="bg-foreground border-darkBorder">
                                     <DropdownMenuItem onClick={() => setIsEditing(true)}
-                                        className="text-darkTextPrimary hover:bg-darkBackground">
+                                        className="text-text_primary hover:bg-background">
                                         Edit
                                     </DropdownMenuItem>
                                     <DropdownMenuItem
                                         onClick={handleDelete}
-                                        className="text-red-600 hover:bg-darkBackground">
+                                        className="text-red-600 hover:bg-background">
                                         Delete
                                     </DropdownMenuItem>
                                 </DropdownMenuContent>
@@ -232,16 +232,16 @@ export const CommentCard = ({
 
                     {isEditing ? (
                         <div className="mt-2">
-                            <div className="bg-darksec rounded-xl border border-darkBorder p-3">
+                            <div className="bg-foreground rounded-xl border border-darkBorder p-3">
                                 <div className="flex justify-between items-center mb-2">
-                                    <div className="text-darkTextSecondery text-sm">Editing comment</div>
-                                    <div className="text-darkTextPrimary text-sm font-medium">{currentUser?.fullName}</div>
+                                    <div className="text-text_secondary text-sm">Editing comment</div>
+                                    <div className="text-text_primary text-sm font-medium">{currentUser?.fullName}</div>
                                 </div>
                                 <textarea
                                     value={editContent}
                                     onChange={(e) => setEditContent(e.target.value)}
                                     placeholder="Edit your comment..."
-                                    className="w-full bg-transparent border-none text-darkTextPrimary placeholder:text-darkTextSecondery focus:ring-0 p-0 text-sm resize-none min-h-[60px] outline-none"
+                                    className="w-full bg-transparent border-none text-text_primary placeholder:text-text_secondary focus:ring-0 p-0 text-sm resize-none min-h-[60px] outline-none"
                                 />
                                 <div className="flex justify-between items-center mt-2 pt-2 border-t border-darkBorder">
                                     <button
@@ -250,13 +250,13 @@ export const CommentCard = ({
                                             setIsEditing(false)
                                             setEditContent(comment.content)
                                         }}
-                                        className="text-darkTextSecondery text-sm hover:text-darkTextPrimary"
+                                        className="text-text_secondary text-sm hover:text-text_primary"
                                     >
                                         Cancel
                                     </button>
                                     <button
                                         onClick={handleEdit}
-                                        className="flex items-center gap-2 text-darkTextPrimary bg-primary rounded-md px-3 py-1 disabled:opacity-50"
+                                        className="flex items-center gap-2 text-text_primary bg-primary rounded-md px-3 py-1 disabled:opacity-50"
                                         disabled={!editContent.trim()}
                                     >
                                         <span className="text-sm">Save</span>
@@ -265,13 +265,13 @@ export const CommentCard = ({
                             </div>
                         </div>
                     ) : (
-                        <p className="mt-1 text-darkTextPrimary">{comment.content}</p>
+                        <p className="mt-1 text-text_primary">{comment.content}</p>
                     )}
 
                     <div className="flex items-center gap-4 mt-3">
                         <button
                             onClick={handleReaction}
-                            className="flex items-center gap-1 text-sm text-darkTextSecondery hover:text-primary"
+                            className="flex items-center gap-1 text-sm text-text_secondary hover:text-primary"
                         >
                             <DynamicSvgIcon
                                 src="/heart.svg"
@@ -285,7 +285,7 @@ export const CommentCard = ({
 
                         <button
                             onClick={() => setIsReplying(!isReplying)}
-                            className="flex items-center gap-1 text-sm text-darkTextSecondery hover:text-primary"
+                            className="flex items-center gap-1 text-sm text-text_secondary hover:text-primary"
                         >
                             <DynamicSvgIcon src="/reply.svg" isActive={false} size={20} />
                             Reply
@@ -295,30 +295,30 @@ export const CommentCard = ({
 
                     {isReplying && (
                         <form onSubmit={handleReplySubmit} className="mt-3">
-                            <div className="bg-darksec rounded-xl border border-darkBorder p-3">
+                            <div className="bg-foreground rounded-xl border border-darkBorder p-3">
                                 <div className="flex justify-between items-center mb-2">
-                                    <div className="text-darkTextSecondery text-sm">Replying to {comment.user.fullName}</div>
-                                    <div className="text-darkTextPrimary text-sm font-medium">{currentUser?.fullName}</div>
+                                    <div className="text-text_secondary text-sm">Replying to {comment.user.fullName}</div>
+                                    <div className="text-text_primary text-sm font-medium">{currentUser?.fullName}</div>
                                 </div>
                                 <textarea
                                     value={replyContent}
                                     onChange={(e) => setReplyContent(e.target.value)}
                                     placeholder="Write a reply..."
-                                    className="w-full bg-transparent border-none text-darkTextPrimary placeholder:text-darkTextSecondery focus:ring-0 p-0 text-sm resize-none min-h-[60px] outline-none"
+                                    className="w-full bg-transparent border-none text-text_primary placeholder:text-text_secondary focus:ring-0 p-0 text-sm resize-none min-h-[60px] outline-none"
                                     disabled={isLoading}
                                 />
                                 <div className="flex justify-between items-center mt-2 pt-2 border-t border-darkBorder">
                                     <button
                                         type="button"
                                         onClick={() => setIsReplying(false)}
-                                        className="text-darkTextSecondery text-sm hover:text-darkTextPrimary"
+                                        className="text-text_secondary text-sm hover:text-text_primary"
                                         disabled={isLoading}
                                     >
                                         Cancel
                                     </button>
                                     <button
                                         type="submit"
-                                        className="flex items-center gap-2 text-darkTextPrimary bg-primary px-3 py-1 rounded-md disabled:opacity-50"
+                                        className="flex items-center gap-2 text-text_primary bg-primary px-3 py-1 rounded-md disabled:opacity-50"
                                         disabled={isLoading || !replyContent.trim()}
                                     >
                                         <span className="text-sm">Reply</span>
@@ -356,16 +356,16 @@ export const CommentCard = ({
                                             </div>
                                             <div className="flex-1">
                                                 <div className="flex items-center gap-2">
-                                                    <span className="font-semibold text-darkTextPrimary">
+                                                    <span className="font-semibold text-text_primary">
                                                         {reply.user.fullName}
                                                     </span>
-                                                    <span className="text-sm text-darkTextSecondery">
+                                                    <span className="text-sm text-text_secondary">
                                                         {formatDistanceToNow(new Date(reply.createdAt), {
                                                             addSuffix: true,
                                                         })}
                                                     </span>
                                                 </div>
-                                                <p className="mt-1 text-darkTextPrimary">{reply.content}</p>
+                                                <p className="mt-1 text-text_primary">{reply.content}</p>
                                             </div>
                                         </div>
                                     ))}

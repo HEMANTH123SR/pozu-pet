@@ -63,7 +63,7 @@ export default function RootLayout({
     >
       <html lang="en" className="dark">
         <body
-          className={`antialiased ${HackerNormal.className} dark:bg-darkBackground bg-[#FFFEFE] h-screen max-h-screen overflow-y-hidden dark:text-[#DDDCDC] `}
+          className={`antialiased ${HackerNormal.className} bg-background  h-screen max-h-screen overflow-y-hidden  `}
         >
           <ClerkLoading>
             <SandboxLoading />

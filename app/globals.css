@@ -125,18 +125,18 @@ body {
 .ce-header {
   font-size: 1.5rem; /* Adjust the size as needed */
   font-weight: bold;
-  color: var(--darkTextPrimary); /* Use your Tailwind color */
+  color: var(--text_primary); /* Use your Tailwind color */
 }
 
 /* Paragraph styles */
 .ce-paragraph {
-  color: var(--darkTextPrimary); /* Use your Tailwind color */
+  color: var(--text_primary); /* Use your Tailwind color */
 }
 
 /* Block content styles */
 .ce-block__content {
-  background-color: var(--darkBackground); /* Use your Tailwind color */
-  color: var(--darkTextPrimary); /* Use your Tailwind color */
+  background-color: var(--background); /* Use your Tailwind color */
+  color: var(--text_primary); /* Use your Tailwind color */
 }
 
 /* Apply custom font to headers */
@@ -184,7 +184,7 @@ body {
 
 /* Checklist styles */
 .cdx-checklist__item {
-  color: var(--darkTextPrimary); /* Text color for checklist items */
+  color: var(--text_primary); /* Text color for checklist items */
 }
 
 .cdx-checklist__item-checkbox {
@@ -200,8 +200,8 @@ body {
 
 /* Inline code styles */
 .cdx-inline-code {
-  background-color: var(--darksec); /* Background color for inline code */
-  color: var(--darkTextPrimary); /* Text color for inline code */
+  background-color: var(--foreground); /* Background color for inline code */
+  color: var(--text_primary); /* Text color for inline code */
   padding: 2px 4px;
   border-radius: 4px;
   font-family: monospace;
@@ -211,13 +211,13 @@ body {
 .cdx-quote {
   border-left: 4px solid var(--primary); /* Border color for quotes */
   padding-left: 1rem;
-  color: var(--darkTextPrimary); /* Text color for quotes */
+  color: var(--text_primary); /* Text color for quotes */
   font-style: italic;
 }
 
 /* List styles */
 .cdx-list {
-  color: var(--darkTextPrimary); /* Text color for lists */
+  color: var(--text_primary); /* Text color for lists */
 }
 
 .cdx-list--unordered {
@@ -299,4 +299,3 @@ body {
     @apply bg-background text-foreground;
   }
 }
-

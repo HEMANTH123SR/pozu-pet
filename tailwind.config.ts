@@ -1,6 +1,8 @@
 import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
+//FEFFFE
+
 const config: Config = {
   darkMode: ["class"],
   content: [
@@ -11,16 +13,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        darksec: "#262626",
-        darkBackground: "#0B0B0A",
-        darkTextPrimary: "#FDFCFD",
-        darkTextSecondery: "#666D70",
+        background: "#FEFFFE",
+        foreground: "#E3E5E8",
+        text_primary: "#000000",
+        text_secondary: "#64696C",
         darkBorder: "#303130",
         primary: "#5E04D5",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        text_primary: "#131212",
-        text_secondary: "#6A737D",
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",

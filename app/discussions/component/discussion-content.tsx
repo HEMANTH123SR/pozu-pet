@@ -84,7 +84,7 @@ export function DiscussionContent({
   return (
     <div className="discussion-content max-w-full w-full">
       {title && (
-        <h1 style={hackerMedium.style} className="pb-1.5 text-black dark:text-darkTextPrimary">
+        <h1 style={hackerMedium.style} className="pb-1.5 text-black dark:text-text_primary">
           {title.charAt(0).toUpperCase() + title.slice(1)}
         </h1>
       )}
@@ -112,7 +112,7 @@ export function DiscussionContent({
             <Image
               src={imageUrls[0] || ''}
               alt="Single image"
-              className="object-cover select-none rounded-2xl border border-darkBorder bg-darkBackground"
+              className="object-cover select-none rounded-2xl border border-darkBorder bg-background"
               fill
               sizes="(max-width: 768px) 100vw, 100%"
               priority
@@ -159,7 +159,7 @@ export function DiscussionContent({
                     <Image
                       src={url}
                       alt={`Image ${index + 1}`}
-                      className="object-cover select-none rounded-2xl border border-darkBorder bg-darkBackground"
+                      className="object-cover select-none rounded-2xl border border-darkBorder bg-background"
                       fill
                       sizes={`(max-width: 768px) 80vw, 80%`}
                       priority={index === 0}

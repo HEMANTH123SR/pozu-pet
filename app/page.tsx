@@ -1,6 +1,3 @@
-
-export const dynamic = 'force-dynamic';
-
 import { Suspense } from 'react';
 import { TopMenu } from "@/components/component/top-header";
 import { DiscussionsList } from "@/app/discussions/component/discussions-list";
@@ -40,7 +37,7 @@ async function DiscussionsContent() {
 
 export default function Page() {
   return (
-    <main className="flex w-full text-black h-screen overflow-y-hidden border-r dark:border-darkBorder">
+    <main className="flex w-full text-black h-screen overflow-y-hidden border-r ">
       <div className="flex flex-col w-full h-full overflow-hidden relative">
         <TopMenu />
         <div className="mt-1 flex">

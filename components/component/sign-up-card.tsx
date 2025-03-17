@@ -35,7 +35,7 @@
 
 //     return (
 //         <div className="flex flex-col h-screen border-r">
-//             <Card className="border-0 shadow-none bg-darkBackground">
+//             <Card className="border-0 shadow-none bg-background">
 //                 <CardContent className="p-8">
 //                     <div className="max-w-sm mx-auto space-y-6">
 //                         {/* Heading */}
@@ -123,7 +123,7 @@ import Link from 'next/link'
 export function SignUpCard() {
     return (
         <div className="flex flex-col h-screen border-r">
-            <Card className="border-0 shadow-none bg-darkBackground">
+            <Card className="border-0 shadow-none bg-background">
                 <CardContent className="p-8">
                     <div className="max-w-sm mx-auto space-y-6">
                         {/* Heading */}

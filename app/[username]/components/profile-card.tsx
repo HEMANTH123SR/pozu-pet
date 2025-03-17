@@ -46,7 +46,7 @@ export const ProfileCard = ({
               <FaPenAlt size={14} strokeWidth={2} />
               <span className="">Edit Profile</span>
             </Link> : <div className="flex space-x-4 justify-center items-center">
-              <Link href={"/chat"} className="bg-darksec p-1.5 rounded-xl">
+              <Link href={"/chat"} className="bg-foreground p-1.5 rounded-xl">
                 <DynamicSvgIcon
                   src="/inbox.svg"
                   isActive={false}
@@ -118,7 +118,7 @@ export const ProfileCard = ({
             {profile.skills?.map((skill, index) => (
               <button
                 key={index}
-                className="text-sm lg:text-xs whitespace-nowrap font-medium leading-4 bg-darksec text-darkTextPrimary border border-primaryBorder rounded-lg inline-flex items-center justify-center gap-x-1 px-2 py-1 h-6 hover:shadow-tag-hover transition-all ease-in-out select-none group/tag"
+                className="text-sm lg:text-xs whitespace-nowrap font-medium leading-4 bg-foreground text-text_primary border border-primaryBorder rounded-lg inline-flex items-center justify-center gap-x-1 px-2 py-1 h-6 hover:shadow-tag-hover transition-all ease-in-out select-none group/tag"
               >
                 <Icon icon={getDynamicIcon(skill)} className="w-3 h-3 flex-shrink-0" />
                 <span>{skill}</span>
@@ -129,7 +129,7 @@ export const ProfileCard = ({
             {profile.interests?.map((interest, index) => (
               <button
                 key={index}
-                className="text-xs whitespace-nowrap font-medium leading-4 bg-darksec text-darkTextPrimary border border-primaryBorder rounded-lg inline-flex items-center justify-center gap-x-1 px-2 py-1 h-6 hover:shadow-tag-hover transition-all ease-in-out select-none group/tag"
+                className="text-xs whitespace-nowrap font-medium leading-4 bg-foreground text-text_primary border border-primaryBorder rounded-lg inline-flex items-center justify-center gap-x-1 px-2 py-1 h-6 hover:shadow-tag-hover transition-all ease-in-out select-none group/tag"
               >
                 <Icon icon={getDynamicIcon(interest)} className="w-3 h-3 flex-shrink-0" />
                 <span>{interest}</span>
@@ -147,7 +147,7 @@ export const ProfileCard = ({
               return <Link
                 href={addHttpAtStart ? `https://${link.link}` : link.link}
                 key={index}
-                className="text-xs whitespace-nowrap font-medium leading-4 bg-darksec text-darkTextPrimary border border-primaryBorder rounded-lg inline-flex items-center justify-center gap-x-1 px-2 py-1 h-6 hover:shadow-tag-hover transition-all ease-in-out select-none group/tag"
+                className="text-xs whitespace-nowrap font-medium leading-4 bg-foreground text-text_primary border border-primaryBorder rounded-lg inline-flex items-center justify-center gap-x-1 px-2 py-1 h-6 hover:shadow-tag-hover transition-all ease-in-out select-none group/tag"
               >
                 <Icon icon={getDynamicIcon(link.platformName)} className="w-3 h-3 flex-shrink-0" />
                 <span>{link.platformName}</span>

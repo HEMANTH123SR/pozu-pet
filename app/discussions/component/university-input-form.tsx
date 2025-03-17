@@ -58,7 +58,7 @@ export function UniversityInputForm({ username, firstName }: UniversityInputForm
     };
 
     return (
-        <Card className="w-full max-w-2xl mx-auto mt-8 bg-darkBackground">
+        <Card className="w-full max-w-2xl mx-auto mt-8 bg-background">
             <CardHeader>
                 <CardTitle className="text-xl" style={hackerMedium.style}>Your Campus</CardTitle>
                 <CardDescription className="flex items-center gap-2 text-base">
@@ -80,10 +80,10 @@ export function UniversityInputForm({ username, firstName }: UniversityInputForm
                                             onChange={(value: string) => field.onChange(value)}
                                         >
                                             <div className="relative mt-1">
-                                                <div className="relative h-9 bg-darksec w-full cursor-default overflow-hidden rounded-md text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-darkBackground focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-purple-700 sm:text-sm">
-                                                    <div className="bg-darkBackground border border-input rounded-md">
+                                                <div className="relative h-9 bg-foreground w-full cursor-default overflow-hidden rounded-md text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-background focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-purple-700 sm:text-sm">
+                                                    <div className="bg-background border border-input rounded-md">
                                                         <Combobox.Input
-                                                            className="w-full text-darkTextPrimary bg-darkBackground border-none py-[0.450rem] pl-3 pr-10 text-sm leading-5 focus:ring-0 rounded-md"
+                                                            className="w-full text-text_primary bg-background border-none py-[0.450rem] pl-3 pr-10 text-sm leading-5 focus:ring-0 rounded-md"
                                                             onChange={(event) => field.onChange(event.target.value)}
                                                             displayValue={(university: string) => university}
                                                         />
@@ -96,7 +96,7 @@ export function UniversityInputForm({ username, firstName }: UniversityInputForm
                                                     </Combobox.Button>
                                                 </div>
 
-                                                <Combobox.Options className="text-darkTextPrimary absolute mt-1 max-h-60 w-full overflow-auto bg-darkBackground py-1 text-sm shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                                                <Combobox.Options className="text-text_primary absolute mt-1 max-h-60 w-full overflow-auto bg-background py-1 text-sm shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                                                     {instituteDetails
                                                         .filter((institute) =>
                                                             field.value
@@ -109,7 +109,7 @@ export function UniversityInputForm({ username, firstName }: UniversityInputForm
                                                             <Combobox.Option
                                                                 key={institute._id}
                                                                 className={({ active }) =>
-                                                                    `relative cursor-default select-none py-2 pl-10 pr-4 ${active ? 'bg-primary text-darkTextPrimary' : 'text-darkTextPrimary'}`
+                                                                    `relative cursor-default select-none py-2 pl-10 pr-4 ${active ? 'bg-primary text-text_primary' : 'text-text_primary'}`
                                                                 }
                                                                 value={institute.name}
                                                             >
@@ -122,7 +122,7 @@ export function UniversityInputForm({ username, firstName }: UniversityInputForm
                                                                         </span>
                                                                         {selected ? (
                                                                             <span
-                                                                                className={`absolute inset-y-0 left-0 flex items-center pl-3 ${active ? 'text-darkTextPrimary' : 'text-primary'}`}
+                                                                                className={`absolute inset-y-0 left-0 flex items-center pl-3 ${active ? 'text-text_primary' : 'text-primary'}`}
                                                                             >
                                                                                 <Check className="h-5 w-5" aria-hidden="true" />
                                                                             </span>

@@ -42,10 +42,10 @@ export const Venue: React.FC<VenueProps> = ({
     };
 
     return (
-        <div className="w-full  min-h-48 p-4 rounded-xl border-darksec border">
+        <div className="w-full  min-h-48 p-4 rounded-xl border-foreground border">
             <div className="flex flex-col space-y-6">
                 <div className="space-y-3">
-                    <Label className="text-lg text-darkTextPrimary">Venue Type</Label>
+                    <Label className="text-lg text-text_primary">Venue Type</Label>
                     <RadioGroup
                         value={type}
                         onValueChange={handleTypeChange}

@@ -17,7 +17,7 @@ const SearchTabs = ({ activeTab, setActiveTab, counts }) => (
             onClick={() => setActiveTab('all')}
             className={`flex items-center space-x-2 py-3 uppercase ${activeTab === 'all'
                 ? 'text-primary border-b-2 border-primary'
-                : 'text-darkTextSecondery'
+                : 'text-text_secondary'
                 }`}
         >
             <span>All</span>
@@ -26,7 +26,7 @@ const SearchTabs = ({ activeTab, setActiveTab, counts }) => (
             onClick={() => setActiveTab('people')}
             className={`flex items-center space-x-2 py-3 uppercase ${activeTab === 'people'
                 ? 'text-primary border-b-2 border-primary'
-                : 'text-darkTextSecondery'
+                : 'text-text_secondary'
                 }`}
         >
             <span>People</span>
@@ -36,7 +36,7 @@ const SearchTabs = ({ activeTab, setActiveTab, counts }) => (
             onClick={() => setActiveTab('discussions')}
             className={`flex items-center space-x-2 py-3 uppercase ${activeTab === 'discussions'
                 ? 'text-primary border-b-2 border-primary'
-                : 'text-darkTextSecondery'
+                : 'text-text_secondary'
                 }`}
         >
             <span>Discussions</span>

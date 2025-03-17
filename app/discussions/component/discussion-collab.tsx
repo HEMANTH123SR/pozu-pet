@@ -103,9 +103,9 @@ export const DiscussionCollab = ({ discussionId, collab }: CollabProps) => {
     };
 
     return (
-        <div className="mt-4 p-3 sm:p-4 rounded-2xl border border-darkBorder bg-darksec/20 w-full max-w-full">
+        <div className="mt-4 p-3 sm:p-4 rounded-2xl border border-darkBorder bg-foreground/20 w-full max-w-full">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-3 border-b border-darkBorder pb-2 gap-2 w-full max-w-full">
-                <div className="flex items-center gap-2 text-darkTextPrimary">
+                <div className="flex items-center gap-2 text-text_primary">
                     <DynamicSvgIcon
                         isActive={false}
                         src="/collabs.svg"
@@ -183,7 +183,7 @@ export const DiscussionCollab = ({ discussionId, collab }: CollabProps) => {
                             onClick={handleRequest}
                             disabled={isRequesting}
                             variant={hasRequested ? "destructive" : "default"}
-                            className="w-full sm:w-auto px-4 py-1 text-sm rounded-2xl border-2 border-darkBorder text-darkTextPrimary"
+                            className="w-full sm:w-auto px-4 py-1 text-sm rounded-2xl border-2 border-darkBorder text-text_primary"
                         >
                             {isRequesting ? (
                                 <span className="animate-pulse">Processing...</span>

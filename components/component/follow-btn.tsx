@@ -48,7 +48,7 @@ export const FollowBtn = ({ classname, profile }: { classname: string, profile: 
               px-4 justify-center flex rounded-xl items-center py-1.5
               transition duration-300 text-sm 
               ${isFollowing
-                    ? "bg-darksec border border-darkBorder text-darkTextPrimary hover:text-red-500"
+                    ? "bg-foreground border border-darkBorder text-text_primary hover:text-red-500"
                     : "bg-primary text-white border-2 hover:scale-110"
                 }
               ${isLoading

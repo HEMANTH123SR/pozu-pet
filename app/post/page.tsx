@@ -185,14 +185,14 @@ export default function PostPage() {
     if (!isSignedIn) return null;
 
     return (
-        <div className="min-h-screen bg-darkBackground">
+        <div className="min-h-screen bg-background">
             {/* Header */}
-            <div className="fixed top-0 left-0 right-0 border-b border-darkBorder bg-darkBackground z-50">
+            <div className="fixed top-0 left-0 right-0 border-b border-darkBorder bg-background z-50">
                 <div className="flex items-center justify-between p-4">
                     <Button
                         variant="ghost"
                         size="icon"
-                        className="text-darkTextPrimary"
+                        className="text-text_primary"
                         onClick={() => router.back()}
                     >
                         <X className="w-6 h-6" />
@@ -200,7 +200,7 @@ export default function PostPage() {
 
                     <div className="flex items-center gap-2">
                         <button
-                            className="px-4 py-1.5 flex items-center gap-2 border-2 border-darkBorder bg-darksec text-white rounded-full text-sm transition-colors"
+                            className="px-4 py-1.5 flex items-center gap-2 border-2 border-darkBorder bg-foreground text-white rounded-full text-sm transition-colors"
                             onClick={() => setShowCollabCreator(prev => !prev)}
                             style={hackerMedium.style}
                         >
@@ -272,7 +272,7 @@ export default function PostPage() {
                     </div>
                 )}
 
-                <div className="fixed bottom-0 left-0  right-0 bg-darkBackground">
+                <div className="fixed bottom-0 left-0  right-0 bg-background">
                     <MobileDiscussionCreateFooter
                         multipleImage={true}
                         setImage={null}

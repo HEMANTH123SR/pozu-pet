@@ -52,7 +52,7 @@ export const UserProfile = ({ profile }: { profile: UserInterface }) => {
         </div>
         <div className="flex items-center justify-center space-x-4">
 
-          <Link href={"/chat"} className="bg-darksec p-1.5 rounded-xl">
+          <Link href={"/chat"} className="bg-foreground p-1.5 rounded-xl">
             <DynamicSvgIcon
               src="/inbox.svg"
               isActive={false}

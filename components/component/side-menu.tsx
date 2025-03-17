@@ -1,11 +1,10 @@
 "use client";
 import Link from "next/link";
 import { useUser } from "@clerk/nextjs";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, } from "next/navigation";
 import { UserInterface } from "@/app/[username]/lib/interface";
 import { hackerMedium, strawberry } from "@/fonts/font";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { DynamicSvgIcon } from "@/components/component/dynamic-svg-icon";
 import React, { useEffect, useState } from "react";
 
@@ -133,7 +132,7 @@ export const SideMenu = () => {
 
             />
             <span
-              className={`${strawberry.className} text-black  dark:text-darkTextPrimary text-[2rem]`}
+              className={`${strawberry.className} text-black  dark:text-text_primary text-[2rem]`}
             >
               kampus
             </span>
@@ -151,7 +150,7 @@ export const SideMenu = () => {
                   key={item.text}
                   href={item.href}
                   aria-label={item.ariaLabel}
-                  className={`flex items-center w-full text-sand-black-800 dark:text-darkTextPrimary justify-start space-x-3 py-3 group transition-all duration-500 ease-out 
+                  className={`flex items-center w-full text-sand-black-800 dark:text-text_primary justify-start space-x-3 py-3 group transition-all duration-500 ease-out 
                   transform ${mounted ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"}`}
                   style={{
                     transitionDelay: `${(index + 2) * 100}ms`,
@@ -191,7 +190,7 @@ export const SideMenu = () => {
                 </Link>
               );
             })}
-            {isSignedIn && <VerifyActionDefault />}
+
           </nav>
         </div>
       </div>
@@ -202,7 +201,7 @@ export const SideMenu = () => {
         `}
       >
         {profile && (
-          <div className="flex mb-1 flex-col dark:text-darkTextPrimary space-y-1.5 transition-all duration-300 ease-out">
+          <div className="flex mb-1 flex-col dark:text-text_primary space-y-1.5 transition-all duration-300 ease-out">
             <Link
               href={`/${profile.username}`}
               className="flex justify-start items-center space-x-2 py-3 capitalize rounded-lg transition-all duration-300 ease-out"
@@ -229,13 +228,13 @@ export const SideMenu = () => {
                 >
                   <span>
                     {profile.followers.length + " "}
-                    <span className="text-slate-500 dark:text-darkTextSecondery group-hover:text-white">
+                    <span className="text-slate-500 dark:text-text_secondary group-hover:text-white">
                       Followers
                     </span>
                   </span>
                   <span className="lg:hidden xl:block">
                     {profile.following.length + " "}
-                    <span className="text-slate-500 dark:text-darkTextSecondery group-hover:text-white">
+                    <span className="text-slate-500 dark:text-text_secondary group-hover:text-white">
                       Following
                     </span>
                   </span>
@@ -252,56 +251,3 @@ export const SideMenu = () => {
 
 
 
-
-export const VerifyActionDefault = () => {
-  const router = useRouter();
-
-  return (
-    <div className="w-full flex justify-start items-center cursor-pointer"
-      onClick={() => {
-        router.push("/verify")
-      }}
-    >
-      <motion.div
-        className="relative flex flex-col justify-center items-center bg-darksec rounded-xl py-5 px-2 border-2 border-darkBorder z-50 lg:w-52 xl:w-11/12 overflow-hidden transition-all duration-300"
-        whileHover={{
-          y: -4,
-          boxShadow: "0px 10px 20px rgba(164, 64, 251, 0.2)",
-        }}
-        transition={{ duration: 0.3 }}
-      >
-        <Image
-          src="/id-card.png"
-          alt="Verify"
-          width={150}
-          height={150}
-          className="w-[60%] h-auto"
-          priority
-        />
-        <h3 className="text-darkTextPrimary text-sm uppercase pb-1 font-semibold">
-          Verify Student Identity
-        </h3>
-        <p className="text-darkTextPrimary text-xs text-center">
-          {`Prove you're a student to unlock exclusive perks, opportunities, and student-only benefits.`}
-        </p>
-        <button
-          type="button"
-          className="gap-1 mt-2 flex items-center font-semibold border transition-all ease-in duration-200 whitespace-nowrap text-center select-none disabled:opacity-50 disabled:cursor-not-allowed gap-x-1 text-xs leading-4 py-1 h-6 rounded-lg px-3 text-gray-900 bg-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-indigo-500 hover:text-white"
-        >
-          Get Verified
-          <span className="-mr-1">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 12H19.5833M19.5833 12L12.5833 5M19.5833 12L12.5833 19" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" vectorEffect="non-scaling-stroke"></path>
-            </svg>
-          </span>
-        </button>
-        {/* Animated Background Glow */}
-        <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-purple-400/0 via-purple-400/30 to-purple-400/0 opacity-50 blur-xl"
-          animate={{ opacity: [0.4, 0.6, 0.4] }}
-          transition={{ duration: 1.5, repeat: Infinity, repeatType: "reverse" }}
-        />
-      </motion.div>
-    </div>
-  );
-};

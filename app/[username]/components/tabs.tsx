@@ -40,7 +40,7 @@ export const Tab = ({
       );
   }
   return (
-    <Card className="w-full bg-darkBackground">
+    <Card className="w-full bg-background">
       <CardHeader>
         <div
           className="flex space-x-7 justify-center items-center border-b w-full"
@@ -50,8 +50,8 @@ export const Tab = ({
             <button
               key={index}
               className={` text-[0.8rem] py-2  ${tab.label === "Bookmarks" ? "hidden md:block" : ""} uppercase ${activeTab === index
-                ? "text-darkTextPrimary border-primary border-b-2"
-                : "text-darkTextSecondery hover:text-darkTextPrimary  "
+                ? "text-text_primary border-primary border-b-2"
+                : "text-text_secondary hover:text-text_primary  "
                 }`}
               onClick={() => setActiveTab(index)}
             >

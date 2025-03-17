@@ -58,7 +58,7 @@ export function MobileHeader() {
   ) {
     return (
       <header
-        className={`fixed top-0 left-0 right-0 z-50 lg:hidden  bg-darkBackground 
+        className={`fixed top-0 left-0 right-0 z-50 lg:hidden  bg-background 
         transition-transform duration-300 ease-in-out
         ${isVisible ? 'translate-y-0' : '-translate-y-[200%]'}
         ${currentPath === "/notification" && "border-b border-darkBorder"}
@@ -99,7 +99,7 @@ export function MobileHeader() {
               </div>
             ) : <Link href={"/sign-up"}
               style={hackerMedium.style}
-              className="border-darkBorder rounded-lg bg-darksec text-darkTextPrimary px-3 py-1">Sign Up</Link>
+              className="border-darkBorder rounded-lg bg-foreground text-text_primary px-3 py-1">Sign Up</Link>
           }
 
         </div>
@@ -200,7 +200,7 @@ export function MobileHeader() {
 
 //   return (
 //     <header
-//       className={`fixed top-0 left-0 right-0 z-50 lg:hidden bg-darkBackground 
+//       className={`fixed top-0 left-0 right-0 z-50 lg:hidden bg-background 
 //       transition-transform duration-300 ease-in-out
 
 //       ${needsBorder ? "border-b border-darkBorder" : ""}
@@ -231,7 +231,7 @@ export function MobileHeader() {
 //             </div>
 //           ) : <Link href={"/sign-up"}
 //             style={hackerMedium.style}
-//             className="border-darkBorder rounded-lg bg-darksec text-darkTextPrimary px-3 py-1">Sign Up</Link>
+//             className="border-darkBorder rounded-lg bg-foreground text-text_primary px-3 py-1">Sign Up</Link>
 //         }
 //       </div>
 //     </header>

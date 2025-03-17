@@ -79,7 +79,7 @@ export function DiscussionCard({
                           alt="Commenter avatar"
                           fill
                           sizes="24px"
-                          className="rounded-full border-2 border-darkTextSecondery dark:border-none object-cover"
+                          className="rounded-full border-2 border-text_secondary dark:border-none object-cover"
                         />
                       </div>
                     ))}

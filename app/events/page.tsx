@@ -100,7 +100,7 @@ export default function EventsPage() {
                         ))
                     ) : events.length > 0 ? (
                         events.map((event) => (
-                            <Card key={event.id} className="bg-darkBackground border border-darkBorder hover:border-[#5E04D5] transition-all rounded-lg cursor-pointer "
+                            <Card key={event.id} className="bg-background border border-darkBorder hover:border-[#5E04D5] transition-all rounded-lg cursor-pointer "
                                 onClick={() => {
                                     if (event.url.includes("devfolio.co")) {
                                         router.push(`https://${event.url}`)

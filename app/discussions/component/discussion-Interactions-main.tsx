@@ -134,7 +134,7 @@ export const DiscussionInteractionsMain = ({
           </div>
           <div className="flex-shrink-0 flex items-center">
             <button
-              className={`p-1.5 bg-primary text-darkTextPrimary rounded-full cursor-pointer ${isLoading ? 'opacity-50' : 'hover:scale-105'}`}
+              className={`p-1.5 bg-primary text-text_primary rounded-full cursor-pointer ${isLoading ? 'opacity-50' : 'hover:scale-105'}`}
               type="submit"
               disabled={isLoading || !commentContent.trim()}
             >

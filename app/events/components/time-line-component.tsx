@@ -128,7 +128,7 @@ export const Timeline: React.FC<TimelineProps> = ({
 
     return (
         <div className="w-full">
-            <div className="w-full p-4 rounded-xl border-darksec border">
+            <div className="w-full p-4 rounded-xl border-foreground border">
                 <div className="flex flex-col space-y-4 w-full">
                     <TimePoint
                         isStart={true}

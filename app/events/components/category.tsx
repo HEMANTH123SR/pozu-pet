@@ -24,10 +24,10 @@ export const Category: React.FC<CategoryProps> = ({ value, onChange }) => {
     ];
 
     return (
-        <div className="w-full h-32 min-h-32 max-h-32 p-4 rounded-xl border-darksec border">
+        <div className="w-full h-32 min-h-32 max-h-32 p-4 rounded-xl border-foreground border">
             <div className="space-y-3 ">
                 <div className='flex flex-col space-y-1'>
-                    <Label className="text-base text-darkTextPrimary">Event Category</Label>
+                    <Label className="text-base text-text_primary">Event Category</Label>
                     <p className='text-sm text-zinc-500'>Pick a event category</p>
                 </div>
                 {/* <span>pick  a event category</span> */}

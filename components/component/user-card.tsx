@@ -21,7 +21,7 @@ export const UserCard = ({ user }) => (
                     <h3 className="text-[#FDFCFD] font-medium"
                         style={hackerMedium.style}
                     >{user.fullName}</h3>
-                    <h4 className='text-darkTextSecondery'>@{user.username}</h4>
+                    <h4 className='text-text_secondary'>@{user.username}</h4>
                 </div>
                 {
                     user.university && <div className='flex items-center'>

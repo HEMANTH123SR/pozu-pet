@@ -210,10 +210,10 @@ export function CreateDiscussionModal() {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="group z-30 w-full border-b border-darkBorder bg-darksec/20 hover:bg-darksec/40 transition-all duration-300 cursor-pointer hidden  lg:block"
+          className="group z-30 w-full border-b border-darkBorder bg-foreground/20 hover:bg-foreground/40 transition-all duration-300 cursor-pointer hidden  lg:block"
         >
           <div className="flex items-start gap-4 p-4">
-            <Avatar className="w-12 h-12 border-2 border-darkBorder  ring-offset-2 ring-offset-darkBackground">
+            <Avatar className="w-12 h-12 border-2 border-darkBorder  ring-offset-2 ring-offset-background">
               <Image
                 src={user.imageUrl}
                 alt="User"
@@ -225,7 +225,7 @@ export function CreateDiscussionModal() {
             </Avatar>
             <div className="flex-1 space-y-4">
               <div className="relative">
-                <div className="w-full cursor-pointer bg-transparent text-darkTextSecondery placeholder:text-darkTextSecondery/60 text-lg z-10 focus:outline-none py-2 font-medium">
+                <div className="w-full cursor-pointer bg-transparent text-text_secondary placeholder:text-text_secondary/60 text-lg z-10 focus:outline-none py-2 font-medium">
                   Share your thoughts...
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-primary/0 via-primary/50 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -236,7 +236,7 @@ export function CreateDiscussionModal() {
                   <motion.div
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className=" text-darkTextSecondery hover:text-darkTextPrimary hover:bg-darksec rounded-lg transition-colors duration-200"
+                    className=" text-text_secondary hover:text-text_primary hover:bg-foreground rounded-lg transition-colors duration-200"
                   >
 
                     <DynamicSvgIcon
@@ -248,7 +248,7 @@ export function CreateDiscussionModal() {
                   <motion.div
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className=" text-darkTextSecondery hover:text-darkTextPrimary hover:bg-darksec rounded-lg transition-colors duration-200"
+                    className=" text-text_secondary hover:text-text_primary hover:bg-foreground rounded-lg transition-colors duration-200"
                   >
                     <DynamicSvgIcon
                       src='/flex-icon-set/poll.svg'
@@ -260,7 +260,7 @@ export function CreateDiscussionModal() {
                   <motion.div
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className=" text-darkTextSecondery hover:text-darkTextPrimary hover:bg-darksec rounded-lg transition-colors duration-200"
+                    className=" text-text_secondary hover:text-text_primary hover:bg-foreground rounded-lg transition-colors duration-200"
                   >
                     <DynamicSvgIcon
                       src='/smile-emoji.svg'
@@ -277,7 +277,7 @@ export function CreateDiscussionModal() {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     style={hackerMedium.style}
-                    className="px-4 py-1 flex justify-center items-center space-x-2 border-darkBorder border-2 bg-darksec hover:scale-125 text-white rounded-full text-sm  font-medium transition-colors relative "
+                    className="px-4 py-1 flex justify-center items-center space-x-2 border-darkBorder border-2 bg-foreground hover:scale-125 text-white rounded-full text-sm  font-medium transition-colors relative "
 
                   >
                     <span>Collab</span>
@@ -310,7 +310,7 @@ export function CreateDiscussionModal() {
 
 
 
-      <DialogContent className="sm:max-w-[700px] p-4  bg-darkBackground    ">
+      <DialogContent className="sm:max-w-[700px] p-4  bg-background    ">
         <DialogTitle className="text-white hidden">
           Create Discussion
         </DialogTitle>
@@ -340,7 +340,7 @@ export function CreateDiscussionModal() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               style={hackerMedium.style}
-              className="px-4 py-1 flex justify-center items-center space-x-2 border-darkBorder border-2 bg-darksec hover:scale-125 text-white rounded-full text-sm  font-medium transition-colors relative "
+              className="px-4 py-1 flex justify-center items-center space-x-2 border-darkBorder border-2 bg-foreground hover:scale-125 text-white rounded-full text-sm  font-medium transition-colors relative "
               onClick={() => setShowCollabCreator(prev => !prev)}
             >
               <span>Collab</span>
@@ -387,7 +387,7 @@ export function CreateDiscussionModal() {
             onChange={(e) =>
               setFormData((prev) => ({ ...prev, title: e.target.value }))
             }
-            className="w-full text-lg placeholder-gray-400 focus:outline-none transition-colors dark:bg-darkBackground rounded "
+            className="w-full text-lg placeholder-gray-400 focus:outline-none transition-colors dark:bg-background rounded "
             style={hackerMedium.style}
           />
           <motion.textarea
@@ -396,7 +396,7 @@ export function CreateDiscussionModal() {
             placeholder="What are you working on?"
             value={formData.content}
             onChange={handleContentChange}
-            className="w-full min-h-[160px] text-base dark:bg-darkBackground placeholder-gray-400 resize-none focus:outline-none transition-colors  rounded "
+            className="w-full min-h-[160px] text-base dark:bg-background placeholder-gray-400 resize-none focus:outline-none transition-colors  rounded "
           />
         </motion.div>
 

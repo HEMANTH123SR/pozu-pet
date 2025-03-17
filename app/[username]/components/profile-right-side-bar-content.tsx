@@ -26,35 +26,35 @@ export const ProfileRightSideBarContent = () => {
 
   const menuItems = [
     {
-      icon: <FaPenAlt className='fill-darkTextPrimary' size={15} />,
+      icon: <FaPenAlt className='fill-text_primary' size={15} />,
       title: "Edit Profile",
       description: "Update your personal information",
       link: "/edit-profile",
       ariaLabel: "Navigate to edit profile page"
     },
     {
-      icon: <RiSettings3Fill size={20} className='fill-darkTextPrimary' />,
+      icon: <RiSettings3Fill size={20} className='fill-text_primary' />,
       title: "Settings",
       description: "Manage account and privacy",
       link: "/settings",
       ariaLabel: "Navigate to settings page"
     },
     {
-      icon: <MdVerified size={20} className='fill-darkTextPrimary' />,
+      icon: <MdVerified size={20} className='fill-text_primary' />,
       title: "Verification",
       description: "Verify your student status",
       link: "/verify",
       ariaLabel: "Navigate to verification page"
     },
     {
-      icon: <Bookmark size={20} className='fill-darkTextPrimary' />,
+      icon: <Bookmark size={20} className='fill-text_primary' />,
       title: "Bookmarks",
       description: "View saved posts and events",
       link: "/bookmark",
       ariaLabel: "Navigate to bookmarks page"
     },
     {
-      icon: <MdSpaceDashboard size={20} className='fill-darkTextPrimary' />,
+      icon: <MdSpaceDashboard size={20} className='fill-text_primary' />,
       title: "Dashboard",
       description: "Track events and competitions",
       link: "/dashboard",
@@ -122,10 +122,10 @@ export const ProfileRightSideBarContent = () => {
           <nav className="space-y-4" role="navigation" aria-label="User menu">
             <Link
               href={`/${user.username}`}
-              className={`flex items-center space-x-3 p-3 py-1.5 rounded-lg hover:bg-darksec transition-colors duration-200 ${user.username === path.slice(1, path.length) && "bg-darksec"}`}
+              className={`flex items-center space-x-3 p-3 py-1.5 rounded-lg hover:bg-foreground transition-colors duration-200 ${user.username === path.slice(1, path.length) && "bg-foreground"}`}
               aria-current={user.username === path.slice(1, path.length) ? "page" : undefined}
             >
-              <div className="text-darkTextPrimary mt-1 relative h-7 w-7">
+              <div className="text-text_primary mt-1 relative h-7 w-7">
                 <Image
                   src={user.imageUrl}
                   alt={`${user.fullName}'s profile picture`}
@@ -136,10 +136,10 @@ export const ProfileRightSideBarContent = () => {
                 />
               </div>
               <div>
-                <h3 className="text-darkTextPrimary font-medium" style={hackerMedium.style}>
+                <h3 className="text-text_primary font-medium" style={hackerMedium.style}>
                   {user.fullName}
                 </h3>
-                <p className="text-darkTextSecondery text-sm">
+                <p className="text-text_secondary text-sm">
                   View your profile and activity
                 </p>
               </div>
@@ -149,14 +149,14 @@ export const ProfileRightSideBarContent = () => {
               <Link
                 key={index}
                 href={item.link}
-                className={`flex items-center space-x-3 p-3 py-1.5 rounded-lg hover:bg-darksec transition-colors duration-200 ${item.link === path && "bg-darksec"}`}
+                className={`flex items-center space-x-3 p-3 py-1.5 rounded-lg hover:bg-foreground transition-colors duration-200 ${item.link === path && "bg-foreground"}`}
                 aria-label={item.ariaLabel}
                 aria-current={item.link === path ? "page" : undefined}
               >
-                <div className="text-darkTextPrimary mt-1">{item.icon}</div>
+                <div className="text-text_primary mt-1">{item.icon}</div>
                 <div>
-                  <h3 className="text-darkTextPrimary font-medium">{item.title}</h3>
-                  <p className="text-darkTextSecondery text-sm">{item.description}</p>
+                  <h3 className="text-text_primary font-medium">{item.title}</h3>
+                  <p className="text-text_secondary text-sm">{item.description}</p>
                 </div>
               </Link>
             ))}

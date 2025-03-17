@@ -40,7 +40,7 @@ export const EventDetailsCard = ({ event }) => {
 
     return (
         <div className="flex flex-col gap-6 col-span-3 border border-darkBorder rounded-2xl p-4">
-            <Card className=" bg-darkBackground border-b-0 w-full">
+            <Card className=" bg-background border-b-0 w-full">
                 <div className="flex  gap-6 w-full">
                     {/* Left side - Image */}
                     <div className="relative w-1/2 h-72 ">
@@ -71,8 +71,8 @@ export const EventDetailsCard = ({ event }) => {
                             <div className="flex flex-col gap-5">
 
                                 <h3 className='text-2xl' style={hackerMedium.style}>When & Where</h3>
-                                <div className="flex items-center  space-x-3.5 text-darkTextPrimary">
-                                    <div className='p-2 bg-darksec border-2 border-darkBorder  rounded-xl'>
+                                <div className="flex items-center  space-x-3.5 text-text_primary">
+                                    <div className='p-2 bg-foreground border-2 border-darkBorder  rounded-xl'>
                                         <DynamicSvgIcon
                                             isActive={false}
                                             src='/flex-icon-set/cal.svg'
@@ -89,8 +89,8 @@ export const EventDetailsCard = ({ event }) => {
                                 </div>
 
                                 {event.venue && (
-                                    <div className="flex items-start space-x-3.5 text-darkTextPrimary">
-                                        <div className='p-2 bg-darksec border-2 border-darkBorder  rounded-xl'>
+                                    <div className="flex items-start space-x-3.5 text-text_primary">
+                                        <div className='p-2 bg-foreground border-2 border-darkBorder  rounded-xl'>
                                             <DynamicSvgIcon
                                                 isActive={false}
                                                 src='/flex-icon-set/map.svg'

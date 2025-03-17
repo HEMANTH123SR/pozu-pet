@@ -123,12 +123,12 @@ export const SocialLinkComponent = ({
                 </div>
               </label>
               <div className="flex flex-1 items-center">
-                <span className="text-darkTextPrimary">{platform.baseUrl}</span>
+                <span className="text-text_primary">{platform.baseUrl}</span>
                 <input
                   type="text"
                   id={platform.name}
                   className="outline-none py-1.5 px-1 rounded-md font-medium w-full 
-                  text-white bg-darkBackground border-gray-300"
+                  text-white bg-background border-gray-300"
                   placeholder={platform.description}
                   value={displayValue}
                   onChange={(e) =>

@@ -54,7 +54,7 @@ export const CollabCreator = ({ onCollabCreate, onCancel }: CollabCreatorProps) 
         <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="space-y-4 p-4 rounded-2xl border border-darkBorder bg-darksec/20"
+            className="space-y-4 p-4 rounded-2xl border border-darkBorder bg-foreground/20"
         >
             <div className="flex items-center justify-between">
                 <h3 className="text-lg font-medium" style={hackerMedium.style}>
@@ -74,7 +74,7 @@ export const CollabCreator = ({ onCollabCreate, onCancel }: CollabCreatorProps) 
                 <div className="space-y-2">
                     <label className="text-sm text-gray-400">Category</label>
                     <Select value={category} onValueChange={setCategory}>
-                        <SelectTrigger className="w-full border-darkBorder bg-darksec/30">
+                        <SelectTrigger className="w-full border-darkBorder bg-foreground/30">
                             <SelectValue placeholder="Select category" />
                         </SelectTrigger>
                         <SelectContent>
@@ -95,7 +95,7 @@ export const CollabCreator = ({ onCollabCreate, onCancel }: CollabCreatorProps) 
                         max={20}
                         value={numPeopleNeeded}
                         onChange={(e) => setNumPeopleNeeded(parseInt(e.target.value) || 1)}
-                        className="border-darkBorder bg-darksec/30"
+                        className="border-darkBorder bg-foreground/30"
                     />
                 </div>
 

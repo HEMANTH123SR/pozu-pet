@@ -212,7 +212,7 @@ const RealTimeChat = ({ userData, initialChannel }: StreamChatProps) => {
   if (!client) return null;
 
   return (
-    <div className="flex w-full border-r border-darkBorder h-screen bg-darkBackground overflow-hidden">
+    <div className="flex w-full border-r border-darkBorder h-screen bg-background overflow-hidden">
       <style jsx global>{`
         :root {
           color-scheme: #0b0b0a;

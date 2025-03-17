@@ -64,7 +64,7 @@ export const DiscussionPoll = ({ pollData, discussionId }) => {
     };
 
     return (
-        <Card className="w-full max-w-full mx-auto my-4 bg-darkBackground border-none">
+        <Card className="w-full max-w-full mx-auto my-4 bg-background border-none">
             <CardContent className="p-6">
                 <div className="space-y-4">
                     {poll.options.map((option, index) => {

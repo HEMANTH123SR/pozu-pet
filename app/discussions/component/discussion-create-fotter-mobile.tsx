@@ -133,11 +133,11 @@ export const MobileDiscussionCreateFooter: React.FC<DiscussionCreateFooterPropsI
             </div>
 
             {/* Footer Actions */}
-            <div className="flex items-center justify-between px-4 py-3 border-t border-darkBorder bg-darkBackground">
+            <div className="flex items-center justify-between px-4 py-3 border-t border-darkBorder bg-background">
                 <div className="flex items-center gap-6">
                     <label
                         htmlFor="mobile-image-upload"
-                        className="flex items-center justify-center text-darkTextSecondery"
+                        className="flex items-center justify-center text-text_secondary"
                     >
                         <input
                             type="file"
@@ -156,7 +156,7 @@ export const MobileDiscussionCreateFooter: React.FC<DiscussionCreateFooterPropsI
 
                     <div className="relative">
                         <button
-                            className="emoji-button text-darkTextSecondery mt-2"
+                            className="emoji-button text-text_secondary mt-2"
                             onClick={() => setShowEmojiPicker(!showEmojiPicker)}
                         >
                             <DynamicSvgIcon
@@ -181,7 +181,7 @@ export const MobileDiscussionCreateFooter: React.FC<DiscussionCreateFooterPropsI
                     </div>
 
                     <button
-                        className="text-darkTextSecondery"
+                        className="text-text_secondary"
                         onClick={handlePollSwitch}
                     >
                         <DynamicSvgIcon
@@ -192,7 +192,7 @@ export const MobileDiscussionCreateFooter: React.FC<DiscussionCreateFooterPropsI
                     </button>
                 </div>
 
-                <span className=" text-darkTextSecondery text-lg ">
+                <span className=" text-text_secondary text-lg ">
                     Type @ to mention
                 </span>
             </div>

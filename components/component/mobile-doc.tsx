@@ -18,7 +18,7 @@ export function MobileNav() {
 
   return (
     <nav
-      className="fixed inset-x-0 bottom-0 z-20 h-[65px] w-full bg-darkBackground lg:hidden"
+      className="fixed inset-x-0 bottom-0 z-20 h-[65px] w-full bg-background lg:hidden"
       style={hackerMedium.style}
     >
       <div className="flex w-full h-full items-center justify-between border-t border-darkBorder">
@@ -26,7 +26,7 @@ export function MobileNav() {
         <div className="flex-1">
           <Link href="/" className="block">
             <div className="relative flex flex-col items-center whitespace-nowrap">
-              <div className={`relative z-[inherit] shrink-0 pb-1 pt-2 ${pathname === "/" ? "text-darkTextPrimary" : "text-darkTextPrimary"}`}>
+              <div className={`relative z-[inherit] shrink-0 pb-1 pt-2 ${pathname === "/" ? "text-text_primary" : "text-text_primary"}`}>
                 <DynamicSvgIcon
                   src="/home.svg"
                   isActive={false}
@@ -35,7 +35,7 @@ export function MobileNav() {
                 />
               </div>
               <p style={{ lineHeight: "1rem" }}
-                className={`relative z-[inherit] whitespace-nowrap text-[0.67rem] transition-colors font-semibold ${pathname === "/" ? "text-darkTextPrimary" : "text-darkTextPrimary"}`}>
+                className={`relative z-[inherit] whitespace-nowrap text-[0.67rem] transition-colors font-semibold ${pathname === "/" ? "text-text_primary" : "text-text_primary"}`}>
                 Home
               </p>
             </div>
@@ -46,7 +46,7 @@ export function MobileNav() {
         <div className="flex-1">
           <Link href="/search" className="block">
             <div className="relative flex flex-col items-center whitespace-nowrap">
-              <div className={`relative z-[inherit] shrink-0 pb-1 pt-2 ${pathname === "/search" ? "text-darkTextPrimary" : "text-darkTextPrimary"}`}>
+              <div className={`relative z-[inherit] shrink-0 pb-1 pt-2 ${pathname === "/search" ? "text-text_primary" : "text-text_primary"}`}>
                 <DynamicSvgIcon
                   src="/explore.svg"
                   isActive={false}
@@ -55,7 +55,7 @@ export function MobileNav() {
                 />
               </div>
               <p style={{ lineHeight: "1rem" }}
-                className={`relative z-[inherit] whitespace-nowrap text-[0.67rem] transition-colors font-semibold ${pathname === "/search" ? "text-darkTextPrimary" : "text-darkTextPrimary"}`}>
+                className={`relative z-[inherit] whitespace-nowrap text-[0.67rem] transition-colors font-semibold ${pathname === "/search" ? "text-text_primary" : "text-text_primary"}`}>
                 Explore
               </p>
             </div>
@@ -66,7 +66,7 @@ export function MobileNav() {
         <div className="flex-1">
           <Link href="/events" className="block">
             <div className="relative flex flex-col items-center whitespace-nowrap">
-              <div className={`relative z-[inherit] shrink-0 pb-1 pt-2 ${pathname === "/events" ? "text-darkTextPrimary" : "text-darkTextPrimary"}`}>
+              <div className={`relative z-[inherit] shrink-0 pb-1 pt-2 ${pathname === "/events" ? "text-text_primary" : "text-text_primary"}`}>
                 <DynamicSvgIcon
                   src="/events.svg"
                   isActive={false}
@@ -75,7 +75,7 @@ export function MobileNav() {
                 />
               </div>
               <p style={{ lineHeight: "1rem" }}
-                className={`relative z-[inherit] whitespace-nowrap text-[0.67rem] transition-colors font-semibold ${pathname === "/events" ? "text-darkTextPrimary" : "text-darkTextPrimary"}`}>
+                className={`relative z-[inherit] whitespace-nowrap text-[0.67rem] transition-colors font-semibold ${pathname === "/events" ? "text-text_primary" : "text-text_primary"}`}>
                 Events
               </p>
             </div>
@@ -86,7 +86,7 @@ export function MobileNav() {
         <div className="flex-1">
           <Link href="/clubs" className="block">
             <div className="relative flex flex-col items-center whitespace-nowrap">
-              <div className={`relative z-[inherit] shrink-0 pb-1 pt-2 ${pathname === "/clubs" ? "text-darkTextPrimary" : "text-darkTextPrimary"}`}>
+              <div className={`relative z-[inherit] shrink-0 pb-1 pt-2 ${pathname === "/clubs" ? "text-text_primary" : "text-text_primary"}`}>
                 <DynamicSvgIcon
                   src="/club.svg"
                   isActive={false}
@@ -95,7 +95,7 @@ export function MobileNav() {
 
                 />
               </div>
-              <p className={`relative z-[inherit] whitespace-nowrap text-xs transition-colors ${pathname === "/clubs" ? "text-darkTextPrimary" : "text-darkTextPrimary"}`}>
+              <p className={`relative z-[inherit] whitespace-nowrap text-xs transition-colors ${pathname === "/clubs" ? "text-text_primary" : "text-text_primary"}`}>
                 Clubs
               </p>
             </div>
@@ -106,7 +106,7 @@ export function MobileNav() {
         <div className="flex-1">
           <Link href="/chat" className="block">
             <div className="relative flex flex-col items-center whitespace-nowrap">
-              <div className={`relative z-[inherit] shrink-0 pb-1 pt-2 ${pathname === "/chat" ? "text-darkTextPrimary" : "text-darkTextPrimary"}`}>
+              <div className={`relative z-[inherit] shrink-0 pb-1 pt-2 ${pathname === "/chat" ? "text-text_primary" : "text-text_primary"}`}>
                 <DynamicSvgIcon
                   src="/flex-icon-set/inbox.svg"
                   isActive={false}
@@ -115,7 +115,7 @@ export function MobileNav() {
 
                 />
               </div>
-              <p className={`relative z-[inherit] whitespace-nowrap text-xs transition-colors ${pathname === "/clubs" ? "text-darkTextPrimary" : "text-darkTextPrimary"}`}>
+              <p className={`relative z-[inherit] whitespace-nowrap text-xs transition-colors ${pathname === "/clubs" ? "text-text_primary" : "text-text_primary"}`}>
                 Inbox
               </p>
             </div>

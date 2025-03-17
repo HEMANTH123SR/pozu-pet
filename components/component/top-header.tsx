@@ -80,7 +80,7 @@ export const TopMenu = () => {
 
     <div
       className={`  fixed  top-0 mt-14  lg:mt-0 lg:static left-0 right-0 flex ${hackerMedium.className} z-50
-        bg-darkBackground backdrop-blur-sm
+        bg-background backdrop-blur-sm
         items-center justify-between min-h-14 min-w-12 md:min-h-14 md:h-14
         border-b border-darkBorder
         transition-all duration-300 transform
@@ -96,8 +96,8 @@ export const TopMenu = () => {
               transition-all duration-300
               hover:scale-105 active:scale-95 hover:bg-gray-100 dark:hover:bg-[#181818]
               ${currentPath === item.href
-                ? "text-sand-black-700 shadow-sm hover:shadow-md dark:text-darkTextPrimary"
-                : "text-gray-600 dark:text-darkTextSecondery hover:border-b-[2px] hover:border-darkBorder"
+                ? "text-sand-black-700 shadow-sm hover:shadow-md dark:text-text_primary"
+                : "text-gray-600 dark:text-text_secondary hover:border-b-[2px] hover:border-darkBorder"
               }`}
           >
             <div className="h-full flex justify-center items-center">

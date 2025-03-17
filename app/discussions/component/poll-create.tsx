@@ -54,7 +54,7 @@ export function PollCreator({ onPollCreate, onCancel }: PollCreatorProps) {
                         value={option}
                         onChange={(e) => updateOption(index, e.target.value)}
                         placeholder={`Option ${index + 1}`}
-                        className="bg-darksec "
+                        className="bg-foreground "
                     />
                 ))}
             </div>

@@ -16,7 +16,7 @@ export const Footer = () => {
 
   return (
     <footer className="px-6 py-3 text-xs" style={hackerMedium.style}>
-      <nav className="flex flex-wrap justify-center items-center justify-items-center gap-2 text-darkTextSecondery">
+      <nav className="flex flex-wrap justify-center items-center justify-items-center gap-2 text-text_secondary">
         {footerLinks.map((link, index) => (
           <React.Fragment key={link.text}>
             <Link href={link.href} className="hover:underline">

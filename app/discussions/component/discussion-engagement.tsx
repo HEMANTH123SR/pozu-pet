@@ -100,7 +100,7 @@ export function DiscussionEngagement({
 
   return (
     <div className="flex w-full max-w-full flex-col animate-fade-in ">
-      <div className=" lg:mt-4 flex items-center justify-between  text-darkTextSecondery  py-2">
+      <div className=" lg:mt-4 flex items-center justify-between  text-text_secondary  py-2">
         <div className="flex items-center justify-center  gap-4">
 
           <Link

@@ -92,7 +92,7 @@
 //                 </button>
 //             </SheetTrigger>
 
-//             <SheetContent side="left" className="w-80 bg-darkBackground border-r border-darkBorder p-0">
+//             <SheetContent side="left" className="w-80 bg-background border-r border-darkBorder p-0">
 //                 <div className="flex flex-col h-full">
 //                     {/* User Profile Section */}
 //                     <div className="p-4">
@@ -101,19 +101,19 @@
 //                             <AvatarFallback>{userData.fullName.charAt(0) || 'U'}</AvatarFallback>
 //                         </Avatar>
 
-//                         <h3 className="text-darkTextPrimary font-semibold text-lg">
+//                         <h3 className="text-text_primary font-semibold text-lg">
 //                             {userData.fullName || 'User Name'}
 //                         </h3>
-//                         <p className="text-darkTextSecondery text-sm">@{userData.username}</p>
+//                         <p className="text-text_secondary text-sm">@{userData.username}</p>
 
 //                         <div className="flex gap-4 mt-3"
 //                             style={hackerMedium.style}
 //                         >
-//                             <div className="text-darkTextPrimary">
+//                             <div className="text-text_primary">
 //                                 <span className="font-semibold">{userData.following}</span>
 //                                 <span className="text-sm ml-1">Following</span>
 //                             </div>
-//                             <div className="text-darkTextPrimary">
+//                             <div className="text-text_primary">
 //                                 <span className="font-semibold">{userData.followers}</span>
 //                                 <span className=" text-sm ml-1">Followers</span>
 //                             </div>
@@ -128,7 +128,7 @@
 //                             <Link
 //                                 key={index}
 //                                 href={item.href}
-//                                 className="flex space-x-3 items-center gap-1 px-4 py-3 text-darkTextPrimary hover:bg-[#262626] transition-colors"
+//                                 className="flex space-x-3 items-center gap-1 px-4 py-3 text-text_primary hover:bg-[#262626] transition-colors"
 //                             >
 //                                 <DynamicSvgIcon
 //                                     src={item.icon}
@@ -139,7 +139,7 @@
 
 //                                 <div className='flex flex-col '>
 //                                     <span style={hackerMedium.style}>{item.label}</span>
-//                                     <p className="text-darkTextSecondery  text-sm ">
+//                                     <p className="text-text_secondary  text-sm ">
 //                                         {item.description}
 //                                     </p>
 //                                 </div>
@@ -152,7 +152,7 @@
 //                     <div className="p-4 mt-auto">
 //                         {sessionId && (
 //                             <SignOutButton signOutOptions={{ sessionId }}>
-//                                 <button className="flex items-center gap-3 text-darkTextPrimary hover:text-red-500 transition-colors w-full">
+//                                 <button className="flex items-center gap-3 text-text_primary hover:text-red-500 transition-colors w-full">
 //                                     <DynamicSvgIcon
 //                                         src='/logout.svg'
 //                                         isActive={false}
@@ -269,7 +269,7 @@
 //                 </button>
 //             </SheetTrigger>
 
-//             <SheetContent side="left" className="w-80 bg-darkBackground border-r border-darkBorder p-0">
+//             <SheetContent side="left" className="w-80 bg-background border-r border-darkBorder p-0">
 //                 <div className="flex flex-col h-full">
 //                     {/* User Profile Section */}
 //                     <div className="p-4">
@@ -278,19 +278,19 @@
 //                             <AvatarFallback>{userData.fullName.charAt(0) || 'U'}</AvatarFallback>
 //                         </Avatar>
 
-//                         <h3 className="text-darkTextPrimary font-semibold text-lg">
+//                         <h3 className="text-text_primary font-semibold text-lg">
 //                             {userData.fullName || 'User Name'}
 //                         </h3>
-//                         <p className="text-darkTextSecondery text-sm">@{userData.username}</p>
+//                         <p className="text-text_secondary text-sm">@{userData.username}</p>
 
 //                         <div className="flex gap-4 mt-3"
 //                             style={hackerMedium.style}
 //                         >
-//                             <div className="text-darkTextPrimary">
+//                             <div className="text-text_primary">
 //                                 <span className="font-semibold">{userData.following}</span>
 //                                 <span className="text-sm ml-1">Following</span>
 //                             </div>
-//                             <div className="text-darkTextPrimary">
+//                             <div className="text-text_primary">
 //                                 <span className="font-semibold">{userData.followers}</span>
 //                                 <span className=" text-sm ml-1">Followers</span>
 //                             </div>
@@ -305,7 +305,7 @@
 //                             <Link
 //                                 key={index}
 //                                 href={item.href}
-//                                 className="flex space-x-3 items-center gap-1 px-4 py-3 text-darkTextPrimary hover:bg-[#262626] transition-colors"
+//                                 className="flex space-x-3 items-center gap-1 px-4 py-3 text-text_primary hover:bg-[#262626] transition-colors"
 //                                 onClick={handleLinkClick}
 //                             >
 //                                 <DynamicSvgIcon
@@ -316,7 +316,7 @@
 
 //                                 <div className='flex flex-col '>
 //                                     <span style={hackerMedium.style}>{item.label}</span>
-//                                     <p className="text-darkTextSecondery  text-sm ">
+//                                     <p className="text-text_secondary  text-sm ">
 //                                         {item.description}
 //                                     </p>
 //                                 </div>
@@ -329,7 +329,7 @@
 //                         {sessionId && (
 //                             <SignOutButton signOutOptions={{ sessionId }}>
 //                                 <button
-//                                     className="flex items-center gap-3 text-darkTextPrimary hover:text-red-500 transition-colors w-full"
+//                                     className="flex items-center gap-3 text-text_primary hover:text-red-500 transition-colors w-full"
 //                                     onClick={handleLinkClick}
 //                                 >
 //                                     <DynamicSvgIcon
@@ -450,7 +450,7 @@ export const UserSideMenu = () => {
                 </button>
             </SheetTrigger>
 
-            <SheetContent side="left" className="w-80 bg-darkBackground border-r border-darkBorder p-0">
+            <SheetContent side="left" className="w-80 bg-background border-r border-darkBorder p-0">
                 <div className="flex flex-col h-full">
                     {/* User Profile Section */}
                     <div className="p-4">
@@ -459,19 +459,19 @@ export const UserSideMenu = () => {
                             <AvatarFallback>{userData.fullName.charAt(0) || 'U'}</AvatarFallback>
                         </Avatar>
 
-                        <h3 className="text-darkTextPrimary font-semibold text-lg">
+                        <h3 className="text-text_primary font-semibold text-lg">
                             {userData.fullName || 'User Name'}
                         </h3>
-                        <p className="text-darkTextSecondery text-sm">@{userData.username}</p>
+                        <p className="text-text_secondary text-sm">@{userData.username}</p>
 
                         <div className="flex gap-4 mt-3"
                             style={hackerMedium.style}
                         >
-                            <div className="text-darkTextPrimary">
+                            <div className="text-text_primary">
                                 <span className="font-semibold">{userData.following}</span>
                                 <span className="text-sm ml-1">Following</span>
                             </div>
-                            <div className="text-darkTextPrimary">
+                            <div className="text-text_primary">
                                 <span className="font-semibold">{userData.followers}</span>
                                 <span className=" text-sm ml-1">Followers</span>
                             </div>
@@ -486,7 +486,7 @@ export const UserSideMenu = () => {
                             <Link
                                 key={index}
                                 href={item.href}
-                                className="flex space-x-3 items-center gap-1 px-4 py-3 text-darkTextPrimary hover:bg-[#262626] transition-colors"
+                                className="flex space-x-3 items-center gap-1 px-4 py-3 text-text_primary hover:bg-[#262626] transition-colors"
                                 onClick={handleLinkClick}
                             >
                                 <DynamicSvgIcon
@@ -497,7 +497,7 @@ export const UserSideMenu = () => {
 
                                 <div className='flex flex-col '>
                                     <span style={hackerMedium.style}>{item.label}</span>
-                                    <p className="text-darkTextSecondery  text-sm ">
+                                    <p className="text-text_secondary  text-sm ">
                                         {item.description}
                                     </p>
                                 </div>
@@ -509,7 +509,7 @@ export const UserSideMenu = () => {
                     <div className="p-4 mt-auto">
                         {sessionId && (
                             <Link href={"/settings"}
-                                className="flex items-center gap-3 text-darkTextPrimary hover:text-red-500 transition-colors w-full"
+                                className="flex items-center gap-3 text-text_primary hover:text-red-500 transition-colors w-full"
                                 onClick={handleLinkClick}
                             >
                                 <DynamicSvgIcon
